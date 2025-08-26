@@ -2085,13 +2085,6 @@ function dz = mck_rhs(tt,z,n,Ns,nd,hyd,geom,therm,num,cfg,Ap,Ao,k_sd,M,C,K,agf,r
 
     dz = [ v; dv; dp1; dp2; dQ; dT_o; dT_s ];
 end
-
-function Jp = local_JPattern(nn)
-    Ns   = nn - 1;
-    Ntot = 2*nn + 2*Ns + Ns + 2;
-    Jp   = sparse(ones(Ntot, Ntot));
-end
-
 function [drift, F_story, dP_orf_t, T_oil, T_steel, mu_t, E_cum, ...
           cav_frac_t, dP_q50, dP_q95, Q_abs_med, Q_abs_p95, ...
           cav_margin_t, cav_margin_min] = ...
