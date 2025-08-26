@@ -2623,14 +2623,6 @@ end
 
 %% ===================== EKSİK/YARDIMCI FONKSİYONLAR =====================
 
-function val = getfield_default(S, name, defaultVal)
-% S alanı yoksa default döndürür
-    if ~isstruct(S) || ~isfield(S,name) || isempty(S.(name))
-        val = defaultVal;
-    else
-        val = S.(name);
-    end
-end
 
 function [tPSA, agPSA] = psa_grid(t, ag, down_dt)
 % PSA için opsiyonel yeniden örnekleme (yalnız downsample; upsample etmez)
